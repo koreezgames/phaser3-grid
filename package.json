@@ -1,0 +1,48 @@
+{
+  "name": "@koreez/phaser3-grid-plugin",
+  "version": "1.0.0-alpha01",
+  "description": "A nice greeter",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "start": "npx parcel src/__examples__/index.html",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caki0915/my-awesome-greeter.git"
+  },
+  "keywords": [
+    "MVC"
+  ],
+  "author": "Koreez LLC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/caki0915/my-awesome-greeter/issues"
+  },
+  "homepage": "https://github.com/caki0915/my-awesome-greeter#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.19",
+    "codecov": "^3.6.1",
+    "jest": "^24.9.0",
+    "parcel-bundler": "^1.12.4",
+    "phaser": "^3.20.1",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.1.0",
+    "tslint": "^5.20.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.7.3"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "dependencies": {}
+}
