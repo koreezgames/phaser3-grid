@@ -44,5 +44,7 @@
   "files": [
     "lib/**/*"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "@koreez/grid-plugin": "koreezgames/grid-plugin#master"
+  }
 }
