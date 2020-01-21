@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "lib": ["es6", "dom", "scripthost"]
+  },
+  "include": ["src/__example__/*"],
+  "exclude": ["node_modules", "**/__tests__/*"]
+}
