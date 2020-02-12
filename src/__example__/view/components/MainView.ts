@@ -56,7 +56,7 @@ function getMainViewLandscapeGridConfig(): IGridConfig {
 
 function getChildViewGridConfig(): IGridConfig {
   return {
-    debug: { color: 0x626262 },
+    debug: { color: 0x000000 },
     name: 'ui',
     bounds: getCanvasBounds,
     cells: [

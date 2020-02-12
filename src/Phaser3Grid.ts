@@ -120,7 +120,7 @@ export class Phaser3Grid extends Phaser.GameObjects.Container {
     if (config.debug) {
       if (this._debugger === undefined) {
         this._debugger = this.scene.add.graphics();
-        this._debugger.defaultStrokeColor = config.debug.color || 0xffffff;
+        this._debugger.defaultStrokeColor = config.debug.color !== undefined ? config.debug.color : 0xffffff;
         this.add(this._debugger);
       } else {
         this._debugger.clear();
