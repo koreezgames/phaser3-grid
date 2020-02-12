@@ -1,10 +1,19 @@
-import { align, Cell, CellAlign, CellScale, fit, IContentConfig, IGridConfig, ICellConfig } from '@koreez/grid-core';
+import { align, Cell, CellAlign, CellScale, fit, ICellConfig, IContentConfig, IGridConfig } from '@koreez/grid-core';
 import './Patcher';
 import { IPhaser3Child, IPhaser3Content } from './Types';
 
 export class Phaser3Grid extends Phaser.GameObjects.Container {
   private _grid!: Cell<IGridConfig>;
   private _debugger!: Phaser.GameObjects.Graphics;
+
+  public add(child: Phaser.GameObjects.GameObject | Phaser.GameObjects.GameObject[]): Phaser.GameObjects.Container {
+    const c = super.add(child);
+    if (this._debugger && child !== this._debugger) {
+      this.bringToTop(this._debugger);
+    }
+
+    return c;
+  }
 
   /**
    * @description Creates Grid object based on input configuration object

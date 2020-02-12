@@ -44,7 +44,7 @@
     "lib/**/*"
   ],
   "dependencies": {
-    "@koreez/grid-core": "koreezgames/grid-core#master",
+    "@koreez/grid-core": "^1.0.0",
     "phaser": "^3.21.0"
   }
 }
